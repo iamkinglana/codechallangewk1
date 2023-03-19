@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PAYE Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>PAYE Calculator</h1>
+		<form>
+			<label for="income">Monthly Income (KES):</label>
+			<input type="number" id="income" name="income" required>
+
+			<label for="nssf">NSSF Contribution (KES):</label>
+			<input type="number" id="nssf" name="nssf" required readonly>
+
+			<label for="nhif">NHIF Contribution (KES):</label>
+			<input type="number" id="nhif" name="nhif" required readonly>
+
+			<button type="button" onclick="calculate()">Calculate</button>
+		</form>
+
+		<div id="results"></div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
