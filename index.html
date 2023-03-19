@@ -1,12 +1,19 @@
-<html>  
-  <head>   
-  </head>  
-  <body>  
-    <h1 id="welcome">Marks page </h1>  
-  </body>
-  
-  
-  <script type = "text/javascript" src="/Challange 1.js">
-   
-  </script> 
-</html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Grade</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Enter your marks:</h1>
+		<form>
+			<input type="number" id="marks" name="marks" required>
+			<button type="button" onclick="calculateGrade()">Calculate Grade</button>
+		</form>
+		<div id="result"></div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
