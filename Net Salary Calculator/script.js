@@ -1,9 +1,14 @@
+/*
+ *Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary. 
+
+ */
+
 function calculate() {
     var income = parseFloat(document.getElementById("income").value);
     var nssf = 0;
     var nhif = 0;
 
-    // Calculate NSSF
+    // NSSF
     if (income <= 6000) {
         nssf = 360;
     } else if (income >= 6001 && income <= 18000) {
@@ -12,7 +17,7 @@ function calculate() {
         nssf = 1080;
     }
 
-    // Calculate NHIF
+    //NHIF
     if (income <= 5999) {
         nhif = 150;
     } else if (income >= 6000 && income <= 7999) {
@@ -49,7 +54,7 @@ function calculate() {
         nhif = 1700;
     }
 
-    // Calculate PAYE
+    // PAYE
     let paye = 0;
     if (income <= 12298) {
         paye = 0;
@@ -65,11 +70,11 @@ function calculate() {
         paye = 7994 + ((income - 58646) * 0.3);
     }
 
-    // Calculate gross salary and net salary
+    // Gross salary and net salary
     let gross_salary = income + nssf + nhif;
     let net_salary = income - paye - nssf - nhif;
 
-    // Display results
+    // Results
     let resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = "NSSF: KES " + nssf.toFixed(2) + "<br>";
     resultsDiv.innerHTML += "NHIF: KES " + nhif.toFixed(2) + "<br>";
